@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+        <title>For Kenzy my lover 💛</title>
+
+        <style>
+            body  {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: Georgia, serif;
+                text-align: center;
+                background: linear-gradient(135deg, #fff5b8, #dfdb04);
+                color: #75551b;
+            }
+
+            .card {
+                background: white;
+                padding: 35px 25px;
+                margin: 20px;
+                border-radius: 25px;
+                box-shadow: 0 10px 30px  #c9a94b55;
+                max-width: 400px;
+            }
+
+            h1 {
+                color: #c49a28;
+                font-size: 38px;
+            }
+
+            .flower {
+                font-size: 65px;
+            }
+
+            button {
+                 background: #e8bd4c;
+                 color: white;
+                 border: none;
+                 border-radius: 25px;
+                 padding: 14px 22px;
+                 cursor: pointer;
+                 font-size: 16px;
+            }
+
+            #message {
+                 display: none;
+                 line-height: 1.9;
+                 margin-top: 25px;
+                 white-space: pre-line;
+            }
+            .card {
+    animation: appear 1s ease-out;
+}
+
+button {
+    transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+    background: #d6a52f;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 24px;
+    animation: floatHeart 5s linear forwards;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+
+.memories {
+    margin-top: 35px;
+}
+
+.memories h2 {
+    color: #c49a28;
+    font-size: 24px;
+}
+
+.memory {
+    background: #fff9e8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px #c9a94b33;
+}
+
+.memory img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+    display: block;
+    margin: auto;
+}
+
+.memory p {
+    color: #75551b;
+    line-height: 1.7;
+}
+
+    </style>
+      </head>
+    </body>
+
+<audio id="bgMusic" loop>
+    <source src="audio/love.mp3" type="audio/mpeg">
+</audio>
+
+<button onclick="document.getElementById('bgMusic').play()">
+    🎵 Play our song ❤️
+</button>
+
+        <div class="card">
+            <div class="flower">🌸<div>
+                <h1>Kenzy 💛</h1>
+                <p>A little world made just for you honey.</p> 
+                <button onclick="openGift()">Open your little world 💝</button>
+                <p id="message"></p>
+
+<div class="memories">
+    <h2>Our Little Memories 💛</h2>
+
+    <div class="memory">
+        <img src="images/memory (1).jpg" alt="Our special memory">
+    </div>
+
+    <div class="memory">
+        <img src="images/memory (3).jpg" alt="one of the best">
+        </div>
+
+    <div class="memory">
+        <img src="images/memory (2).jpg" alt="A favorite memory">
+        <p>Some moments stay in the heart forever. 💖</p>
+    </div>
+</div>
+
+            </div>
+            <script>
+                
+function openGift() {
+    const message = document.getElementById("message");
+    const button = document.querySelector("button");
+
+    button.style.display = "none";
+    message.style.display = "block";
+    message.textContent = "";
+
+    const loveMessage = `Kenzy, 💛
+
+You are my favorite person
+and my happiest little thought. 🌻
+
+Every day with you feels special.
+You make ordinary moments beautiful.
+
+No matter how busy life gets,
+I hope you always remember
+how much you mean to me. 💖
+
+With love,
+Your babe aladham ♡`;
+
+    let i = 0;
+
+    const typing = setInterval(() => {
+        message.textContent += loveMessage[i];
+        i++;
+
+        if (i >= loveMessage.length) {
+            clearInterval(typing);
+        }
+    }, 55);
+}
+
+
+
+
+setInterval(() => {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.textContent = ["💛", "💖", "🌻", "💕"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 700);
+
+                 </script>
+                 </body>
+                </html>          
